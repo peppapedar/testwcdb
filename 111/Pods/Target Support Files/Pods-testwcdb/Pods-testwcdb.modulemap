@@ -1,0 +1,6 @@
+framework module Pods_testwcdb {
+  umbrella header "Pods-testwcdb-umbrella.h"
+
+  export *
+  module * { export * }
+}
