@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = '1111/testwcdb/Classes/**/*.{h,m,mm,pch}'
+  s.source_files = 'testwcdb/testwcdb/Classes/**/*.{h,m,mm,pch}'
     
 #  s.exclude_files = "testwcdb/testwcdb/*.plist"
   #  s.resource_bundles = {
@@ -46,10 +46,10 @@ Pod::Spec.new do |s|
   
 s.dependency 'WCDB','1.0.7.5'
 #
-  s.pod_target_xcconfig = {
-#          'FRAMEWORK_SEARCH_PATHS'   => '$(inherited) $(PODS_ROOT)/testwcdb/testwcdb/Classes/Frameworks',
-#          'LIBRARY_SEARCH_PATHS'     => '$(inherited) $(PODS_ROOT)/testwcdb/testwcdb/Classes/Libraries',
-      'OTHER_LDFLAGS'            => '$(inherited) -undefined dynamic_lookup -ObjC',
-      'ENABLE_BITCODE'           => 'NO'
-  }
+#   s.pod_target_xcconfig = {
+# #          'FRAMEWORK_SEARCH_PATHS'   => '$(inherited) $(PODS_ROOT)/testwcdb/testwcdb/Classes/Frameworks',
+# #          'LIBRARY_SEARCH_PATHS'     => '$(inherited) $(PODS_ROOT)/testwcdb/testwcdb/Classes/Libraries',
+#       'OTHER_LDFLAGS'            => '$(inherited) -undefined dynamic_lookup -ObjC',
+#       'ENABLE_BITCODE'           => 'NO'
+#   }
 end
