@@ -55,7 +55,7 @@ s.pod_target_xcconfig = {
   "CLANG_CXX_LIBRARY" => "libc++",
   "OTHER_CFLAGS" => "-fvisibility-inlines-hidden",
   "OTHER_CPLUSPLUSFLAGS" => "-fvisibility-inlines-hidden",
-        'OTHER_LDFLAGS'            => '$(inherited) -undefined dynamic_lookup -ObjC',
+        'OTHER_LDFLAGS'            => '$(inherited) -undefined dynamic_lookup -ObjC', 
       'ENABLE_BITCODE'           => 'NO'
 }
 #   s.pod_target_xcconfig = {
