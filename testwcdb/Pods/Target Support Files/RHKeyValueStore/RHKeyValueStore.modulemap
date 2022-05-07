@@ -1,0 +1,6 @@
+framework module RHKeyValueStore {
+  umbrella header "RHKeyValueStore-umbrella.h"
+
+  export *
+  module * { export * }
+}

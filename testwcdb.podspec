@@ -31,6 +31,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'testwcdb/testwcdb/Classes/**/*.{h,m,mm,pch}'
+
+  s.static_framework = true
     
 #  s.exclude_files = "testwcdb/testwcdb/*.plist"
   #  s.resource_bundles = {
@@ -44,14 +46,14 @@ Pod::Spec.new do |s|
 #
 #  s.vendored_libraries = "testwcdb/testwcdb/Classes/library/*.framework"
   
-s.dependency 'WCDB','1.0.7.5'
+s.dependency 'WCDB','1.0.4'
 # s.pod_target_xcconfig = { :CLANG_CXX_LANGUAGE_STANDARD => "c++11", :CLANG_CXX_LIBRARY => "libc++"}
 
 s.pod_target_xcconfig = {
   # "GCC_PREPROCESSOR_DEFINITIONS" => "WCDB_BUILTIN_COLUMN_CODING SQLITE_HAS_CODEC",
   # "HEADER_SEARCH_PATHS" => "${PODS_ROOT}/WCDB",
   # "LIBRARY_SEARCH_PATHS[sdk=macosx*]" => "$(SDKROOT)/usr/lib/system",
-  "CLANG_CXX_LANGUAGE_STANDARD" => "c++17",
+  "CLANG_CXX_LANGUAGE_STANDARD" => "c++11",
   "CLANG_CXX_LIBRARY" => "libc++",
   "OTHER_CFLAGS" => "-fvisibility-inlines-hidden",
   "OTHER_CPLUSPLUSFLAGS" => "-fvisibility-inlines-hidden",

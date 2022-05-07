@@ -10,6 +10,24 @@
 #import <WCDB/WCDB.h>
 #import "CIBXAppDAOBase+Private.h"
 //#import "CIBXAppConfigModel+WCTTableCoding.h"
+
+@interface CIBXAppConfigModel : NSObject <WCTTableCoding>
+
+@property (nonatomic, strong) NSString *key;
+@property (nonatomic, strong) NSString *value;
+
+@end
+
+@implementation CIBXAppConfigModel
+
+WCDB_IMPLEMENTATION(CIBXAppConfigModel)
+WCDB_SYNTHESIZE(CIBXAppConfigModel, key)
+WCDB_SYNTHESIZE(CIBXAppConfigModel, value)
+
+WCDB_PRIMARY(CIBXAppConfigModel, key)
+
+@end
+
 @implementation CIBXAppConfigDao
 + (instancetype)sharedInstance{
     static dispatch_once_t once;
@@ -47,7 +65,7 @@
     if (appid.length == 0) {
         return nil;
     }
-    NSArray *array = [self.database getObjectsOfClass:self.class.modelClass fromTable:self.class.tableName where:CIBXAppConfigModel.appId==appid];
+    NSArray *array = [self.database getObjectsOfClass:self.class.modelClass fromTable:self.class.tableName where:CIBXAppConfigModel.key==appid];
     return array.count>0?array[0]:nil;
 }
 
@@ -56,7 +74,7 @@
 - (BOOL)updateModel:(CIBXAppConfigModel *)model{
     WCTUpdate *update = [self.database prepareUpdateTable:self.class.tableName
                                              onProperties:CIBXAppConfigModel.AllProperties];
-    [update where:CIBXAppConfigModel.appId == model.appId];
+    [update where:CIBXAppConfigModel.key == model.key];
     BOOL result = [update executeWithObject:model];
     return result;
 }
@@ -67,7 +85,7 @@
     if (appid.length == 0) {
         return NO;
     }
-    return [self.database deleteObjectsFromTable:self.class.tableName where:CIBXAppConfigModel.appId==appid];
+    return [self.database deleteObjectsFromTable:self.class.tableName where:CIBXAppConfigModel.key==appid];
 }
 /// 获取数据条数
 - (NSNumber *)getCount{
