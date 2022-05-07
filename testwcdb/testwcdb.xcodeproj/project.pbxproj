@@ -326,6 +326,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 699AC50D524EAD7F63600B32 /* Pods-testwcdb.debug.xcconfig */;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 26LRVTGA28;
 				OTHER_LDFLAGS = "-ObjC";
@@ -339,6 +340,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E5D1525BABA5DC7D83FFC97B /* Pods-testwcdb.release.xcconfig */;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 26LRVTGA28;
 				OTHER_LDFLAGS = "-ObjC";
