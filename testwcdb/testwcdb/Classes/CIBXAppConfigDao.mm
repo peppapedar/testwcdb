@@ -9,7 +9,7 @@
 #import "CIBXAppConfigDao.h"
 #import <WCDB/WCDB.h>
 #import "CIBXAppDAOBase+Private.h"
-#import "CIBXAppConfigModel+WCTTableCoding.h"
+//#import "CIBXAppConfigModel+WCTTableCoding.h"
 @implementation CIBXAppConfigDao
 + (instancetype)sharedInstance{
     static dispatch_once_t once;

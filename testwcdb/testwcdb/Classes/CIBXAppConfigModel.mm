@@ -7,7 +7,7 @@
 //
 
 #import "CIBXAppConfigModel.h"
-#import "CIBXAppConfigModel+WCTTableCoding.h"
+//#import "CIBXAppConfigModel+WCTTableCoding.h"
 @implementation CIBXAppConfigModel
 WCDB_IMPLEMENTATION(CIBXAppConfigModel)
 
