@@ -12,7 +12,6 @@
 		074934692824C5D1006C766F /* CIBXAppDAOBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 074934652824C5D1006C766F /* CIBXAppDAOBase.mm */; };
 		0749346C2824C8CD006C766F /* CIBXAppConfigDao.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0749346B2824C8CD006C766F /* CIBXAppConfigDao.mm */; };
 		074934702824C900006C766F /* CIBXAppConfigModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0749346D2824C8FF006C766F /* CIBXAppConfigModel.mm */; };
-		07608CC228261BCD001C22E0 /* CIBXAppConfigModel+WCTTableCoding.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07608CC128261BCD001C22E0 /* CIBXAppConfigModel+WCTTableCoding.mm */; };
 		ECE0A4E4A204FFC4301040FC /* Pods_testwcdb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BD0477E8CD4C30D4F3111D /* Pods_testwcdb.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,9 +39,7 @@
 		0749346A2824C8CD006C766F /* CIBXAppConfigDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIBXAppConfigDao.h; sourceTree = "<group>"; };
 		0749346B2824C8CD006C766F /* CIBXAppConfigDao.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CIBXAppConfigDao.mm; sourceTree = "<group>"; };
 		0749346D2824C8FF006C766F /* CIBXAppConfigModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CIBXAppConfigModel.mm; sourceTree = "<group>"; };
-		0749346E2824C8FF006C766F /* CIBXAppConfigModel+WCTTableCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CIBXAppConfigModel+WCTTableCoding.h"; sourceTree = "<group>"; };
 		0749346F2824C900006C766F /* CIBXAppConfigModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIBXAppConfigModel.h; sourceTree = "<group>"; };
-		07608CC128261BCD001C22E0 /* CIBXAppConfigModel+WCTTableCoding.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "CIBXAppConfigModel+WCTTableCoding.mm"; sourceTree = "<group>"; };
 		699AC50D524EAD7F63600B32 /* Pods-testwcdb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testwcdb.debug.xcconfig"; path = "Target Support Files/Pods-testwcdb/Pods-testwcdb.debug.xcconfig"; sourceTree = "<group>"; };
 		C2BD0477E8CD4C30D4F3111D /* Pods_testwcdb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testwcdb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D1525BABA5DC7D83FFC97B /* Pods-testwcdb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testwcdb.release.xcconfig"; path = "Target Support Files/Pods-testwcdb/Pods-testwcdb.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,8 +96,6 @@
 				0749346B2824C8CD006C766F /* CIBXAppConfigDao.mm */,
 				0749346F2824C900006C766F /* CIBXAppConfigModel.h */,
 				0749346D2824C8FF006C766F /* CIBXAppConfigModel.mm */,
-				0749346E2824C8FF006C766F /* CIBXAppConfigModel+WCTTableCoding.h */,
-				07608CC128261BCD001C22E0 /* CIBXAppConfigModel+WCTTableCoding.mm */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -209,7 +204,6 @@
 				074934702824C900006C766F /* CIBXAppConfigModel.mm in Sources */,
 				074934592824AD5A006C766F /* testwcdb.mm in Sources */,
 				074934692824C5D1006C766F /* CIBXAppDAOBase.mm in Sources */,
-				07608CC228261BCD001C22E0 /* CIBXAppConfigModel+WCTTableCoding.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

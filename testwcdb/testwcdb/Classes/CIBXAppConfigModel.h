@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <WCDB/WCDB.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -24,6 +25,21 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign)long expireTimestamp;
 @property (nonatomic,assign)NSInteger openCache;
 @property (nonatomic,strong)NSString *files;
+
+WCDB_PROPERTY(seq)
+WCDB_PROPERTY(appId)
+WCDB_PROPERTY(downloadUrl)
+WCDB_PROPERTY(appVersion)
+WCDB_PROPERTY(files)
+WCDB_PROPERTY(appName)
+WCDB_PROPERTY(key)
+WCDB_PROPERTY(md5)
+WCDB_PROPERTY(plugins)
+WCDB_PROPERTY(apiVersion)
+WCDB_PROPERTY(expireTimestamp)
+WCDB_PROPERTY(openCache)
+WCDB_PROPERTY(appType)
+
 @end
 
 NS_ASSUME_NONNULL_END
