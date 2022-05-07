@@ -12,7 +12,7 @@
 
 - (void)testdbInsert {
     NSLog(@"插入一条数据");
-    [[CIBXAppConfigDao sharedInstance] deleteWithId:@"111"];
+    [[CIBXAppConfigDao sharedInstance] save:[[CIBXAppConfigModel alloc] init]];
 }
 
 @end

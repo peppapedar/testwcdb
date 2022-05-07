@@ -9,24 +9,26 @@
 #import "CIBXAppConfigDao.h"
 #import <WCDB/WCDB.h>
 #import "CIBXAppDAOBase+Private.h"
-//#import "CIBXAppConfigModel+WCTTableCoding.h"
+#import "CIBXAppConfigModel.h"
 
-@interface CIBXAppConfigModel : NSObject <WCTTableCoding>
+@interface CIBXAppConfigModel (WCTTableCoding) <WCTTableCoding>
 
-@property (nonatomic, strong) NSString *key;
-@property (nonatomic, strong) NSString *value;
+WCDB_PROPERTY(seq)
+WCDB_PROPERTY(appId)
+WCDB_PROPERTY(downloadUrl)
+WCDB_PROPERTY(appVersion)
+WCDB_PROPERTY(files)
+WCDB_PROPERTY(appName)
+WCDB_PROPERTY(key)
+WCDB_PROPERTY(md5)
+WCDB_PROPERTY(plugins)
+WCDB_PROPERTY(apiVersion)
+WCDB_PROPERTY(expireTimestamp)
+WCDB_PROPERTY(openCache)
+WCDB_PROPERTY(appType)
 
 @end
 
-@implementation CIBXAppConfigModel
-
-WCDB_IMPLEMENTATION(CIBXAppConfigModel)
-WCDB_SYNTHESIZE(CIBXAppConfigModel, key)
-WCDB_SYNTHESIZE(CIBXAppConfigModel, value)
-
-WCDB_PRIMARY(CIBXAppConfigModel, key)
-
-@end
 
 @implementation CIBXAppConfigDao
 + (instancetype)sharedInstance{
@@ -65,7 +67,7 @@ WCDB_PRIMARY(CIBXAppConfigModel, key)
     if (appid.length == 0) {
         return nil;
     }
-    NSArray *array = [self.database getObjectsOfClass:self.class.modelClass fromTable:self.class.tableName where:CIBXAppConfigModel.key==appid];
+    NSArray *array = [self.database getObjectsOfClass:self.class.modelClass fromTable:self.class.tableName where:CIBXAppConfigModel.appId==appid];
     return array.count>0?array[0]:nil;
 }
 
@@ -74,7 +76,7 @@ WCDB_PRIMARY(CIBXAppConfigModel, key)
 - (BOOL)updateModel:(CIBXAppConfigModel *)model{
     WCTUpdate *update = [self.database prepareUpdateTable:self.class.tableName
                                              onProperties:CIBXAppConfigModel.AllProperties];
-    [update where:CIBXAppConfigModel.key == model.key];
+    [update where:CIBXAppConfigModel.appId == model.appId];
     BOOL result = [update executeWithObject:model];
     return result;
 }
@@ -85,7 +87,7 @@ WCDB_PRIMARY(CIBXAppConfigModel, key)
     if (appid.length == 0) {
         return NO;
     }
-    return [self.database deleteObjectsFromTable:self.class.tableName where:CIBXAppConfigModel.key==appid];
+    return [self.database deleteObjectsFromTable:self.class.tableName where:CIBXAppConfigModel.appId==appid];
 }
 /// 获取数据条数
 - (NSNumber *)getCount{

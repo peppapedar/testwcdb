@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'testwcdb/testwcdb/Classes/**/*.{h,m,mm,pch}'
 
-  s.static_framework = true
+  # s.static_framework = true
     
 #  s.exclude_files = "testwcdb/testwcdb/*.plist"
   #  s.resource_bundles = {
@@ -46,20 +46,26 @@ Pod::Spec.new do |s|
 #
 #  s.vendored_libraries = "testwcdb/testwcdb/Classes/library/*.framework"
   
-s.dependency 'WCDB','1.0.4'
+s.requires_arc = true
+s.dependency "WCDB", "~> 1.0.4"
+s.libraries = 'c++', 'z'
+s.xcconfig = {
+    "CLANG_CXX_LANGUAGE_STANDARD" => "gnu++0x",
+    "CLANG_CXX_LIBRARY" => "libc++",
+}
 # s.pod_target_xcconfig = { :CLANG_CXX_LANGUAGE_STANDARD => "c++11", :CLANG_CXX_LIBRARY => "libc++"}
 
-s.pod_target_xcconfig = {
-  # "GCC_PREPROCESSOR_DEFINITIONS" => "WCDB_BUILTIN_COLUMN_CODING SQLITE_HAS_CODEC",
-  # "HEADER_SEARCH_PATHS" => "${PODS_ROOT}/WCDB",
-  # "LIBRARY_SEARCH_PATHS[sdk=macosx*]" => "$(SDKROOT)/usr/lib/system",
-  "CLANG_CXX_LANGUAGE_STANDARD" => "c++11",
-  "CLANG_CXX_LIBRARY" => "libc++",
-  "OTHER_CFLAGS" => "-fvisibility-inlines-hidden",
-  "OTHER_CPLUSPLUSFLAGS" => "-fvisibility-inlines-hidden",
-        'OTHER_LDFLAGS'            => '$(inherited) -undefined dynamic_lookup -ObjC', 
-      'ENABLE_BITCODE'           => 'NO'
-}
+# s.pod_target_xcconfig = {
+#   # "GCC_PREPROCESSOR_DEFINITIONS" => "WCDB_BUILTIN_COLUMN_CODING SQLITE_HAS_CODEC",
+#   # "HEADER_SEARCH_PATHS" => "${PODS_ROOT}/WCDB",
+#   # "LIBRARY_SEARCH_PATHS[sdk=macosx*]" => "$(SDKROOT)/usr/lib/system",
+#   "CLANG_CXX_LANGUAGE_STANDARD" => "c++11",
+#   "CLANG_CXX_LIBRARY" => "libc++",
+#   "OTHER_CFLAGS" => "-fvisibility-inlines-hidden",
+#   "OTHER_CPLUSPLUSFLAGS" => "-fvisibility-inlines-hidden",
+#         'OTHER_LDFLAGS'            => '$(inherited) -undefined dynamic_lookup -ObjC', 
+#       'ENABLE_BITCODE'           => 'NO'
+# }
 #   s.pod_target_xcconfig = {
 #     'CLANG_CXX_LANGUAGE_STANDARD' => "c++11", 
 #     'CLANG_CXX_LIBRARY' => "libc++",

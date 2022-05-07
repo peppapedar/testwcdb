@@ -7,9 +7,7 @@
 //
 
 #import "CIBXAppDAOBase.h"
-
-@class CIBXAppConfigModel;
-
+#import "CIBXAppConfigModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CIBXAppConfigDao : CIBXAppDAOBase
