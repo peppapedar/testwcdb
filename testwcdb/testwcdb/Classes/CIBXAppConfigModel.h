@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CIBXAppConfigModel : NSObject
+@interface CIBXAppConfigModel : NSObject<WCTTableCoding>
 @property (nonatomic,assign)NSInteger seq;
 @property (nonatomic,strong)NSString *appName;
 @property (nonatomic,strong)NSString *appId;
@@ -39,7 +39,6 @@ WCDB_PROPERTY(apiVersion)
 WCDB_PROPERTY(expireTimestamp)
 WCDB_PROPERTY(openCache)
 WCDB_PROPERTY(appType)
-
 @end
 
 NS_ASSUME_NONNULL_END

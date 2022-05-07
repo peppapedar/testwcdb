@@ -23,6 +23,7 @@ WCDB_SYNTHESIZE(CIBXAppConfigModel, files)
 WCDB_SYNTHESIZE(CIBXAppConfigModel, plugins)
 WCDB_SYNTHESIZE(CIBXAppConfigModel, appName)
 WCDB_SYNTHESIZE(CIBXAppConfigModel, apiVersion)
+WCDB_SYNTHESIZE(CIBXAppConfigModel, appType)
 
 WCDB_PRIMARY_AUTO_INCREMENT(CIBXAppConfigModel, seq)
 @end
