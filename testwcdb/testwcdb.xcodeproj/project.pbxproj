@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		074934592824AD5A006C766F /* testwcdb.m in Sources */ = {isa = PBXBuildFile; fileRef = 074934582824AD5A006C766F /* testwcdb.m */; };
+		074934592824AD5A006C766F /* testwcdb.mm in Sources */ = {isa = PBXBuildFile; fileRef = 074934582824AD5A006C766F /* testwcdb.mm */; };
 		0749345A2824AD5A006C766F /* testwcdb.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 074934572824AD5A006C766F /* testwcdb.h */; };
 		074934692824C5D1006C766F /* CIBXAppDAOBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 074934652824C5D1006C766F /* CIBXAppDAOBase.mm */; };
 		0749346C2824C8CD006C766F /* CIBXAppConfigDao.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0749346B2824C8CD006C766F /* CIBXAppConfigDao.mm */; };
@@ -31,7 +31,7 @@
 /* Begin PBXFileReference section */
 		074934542824AD5A006C766F /* libtestwcdb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtestwcdb.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		074934572824AD5A006C766F /* testwcdb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testwcdb.h; sourceTree = "<group>"; };
-		074934582824AD5A006C766F /* testwcdb.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testwcdb.m; sourceTree = "<group>"; };
+		074934582824AD5A006C766F /* testwcdb.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = testwcdb.mm; sourceTree = "<group>"; };
 		074934652824C5D1006C766F /* CIBXAppDAOBase.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CIBXAppDAOBase.mm; sourceTree = "<group>"; };
 		074934662824C5D1006C766F /* CIBXAppDAOBase+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CIBXAppDAOBase+Private.h"; sourceTree = "<group>"; };
 		074934672824C5D1006C766F /* CIBXAPPWCDBKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIBXAPPWCDBKey.h; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			children = (
 				074934612824B650006C766F /* Classes */,
 				074934572824AD5A006C766F /* testwcdb.h */,
-				074934582824AD5A006C766F /* testwcdb.m */,
+				074934582824AD5A006C766F /* testwcdb.mm */,
 			);
 			path = testwcdb;
 			sourceTree = "<group>";
@@ -204,7 +204,7 @@
 			files = (
 				0749346C2824C8CD006C766F /* CIBXAppConfigDao.mm in Sources */,
 				074934702824C900006C766F /* CIBXAppConfigModel.mm in Sources */,
-				074934592824AD5A006C766F /* testwcdb.m in Sources */,
+				074934592824AD5A006C766F /* testwcdb.mm in Sources */,
 				074934692824C5D1006C766F /* CIBXAppDAOBase.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
